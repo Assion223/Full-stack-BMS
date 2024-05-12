@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springvuebd
+    username: root
+    password: 111111
+#  mvc:
+#    servlet:
+#      load-on-startup: 10
+
+server:
+  port: 9090
+
+#????resources.mapper???xml
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl   #????sqp??
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+  type-aliases-package: com.examles.springboot.mapper
+
+files:
+  upload:
+    path: D:/图片杂碎/
+
